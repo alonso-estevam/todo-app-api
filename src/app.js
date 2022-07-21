@@ -3,13 +3,9 @@ import express from 'express'
 
 // importando os controllers
 import usuarioController from './controllers/usuario-controller.js'
-import tarefaController from './controllers/tarefa-controller.js'
 
 // import de middlewares
-import autenticacao from './middleware/autenticacao.js'
-
-// importando o bd (VERIFICAR)
-import bd from './infra/bd.js'
+import autenticacao from './middleware/middleware.js'
 
 // instanciando o servidor
 const app = express()
@@ -25,7 +21,6 @@ autenticacao(app)
 
 // chamando os controllers e passando o servidor como parâmetro
 usuarioController(app)
-tarefaController(app)
 
 // abrindo o servidor na porta escolhida
 app.listen(port, ()=>{
