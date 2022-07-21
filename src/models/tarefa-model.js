@@ -1,4 +1,4 @@
-import bd from '../database/bd.js'
+import bd from '../infra/bd.js'
 
 let id = 0
 
