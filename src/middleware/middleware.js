@@ -8,6 +8,9 @@ const middlewareController = (app)=>{
             }else{
                 res.json({"erro":"Usuario não autorizado"})
             }
+        }else{
+            // O metodo next() serve para informar que a requisição pode seguir o caminho normal
+            next()
         }
     })
 }
